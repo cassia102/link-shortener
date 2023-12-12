@@ -1,4 +1,4 @@
-# Alpaca Image Generator
+# Link Shortener
 
 Generate unique shortened urls using bit.ly.
 
