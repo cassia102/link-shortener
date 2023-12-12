@@ -1,0 +1,172 @@
+@import url('https://fonts.googleapis.com/css2?family=Work+Sans:wght@400;500;600;700;800;900&display=swap');
+
+@mixin mobile {
+    @media screen and (max-width: 768px) {
+        @content;
+    }
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Work Sans', sans-serif;
+}
+
+a {
+    text-decoration: none;
+}
+
+p {
+    font-weight: 300;
+}
+
+.app {
+    width: 100vw;
+    height: 100vh;
+    padding-top: 10%;
+    background-image: url('./assets/images/link-shorten-background.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+
+    @include mobile {
+        background-position: top left;
+    }
+
+    .link-shortener-app {
+        width: 50%;
+        margin: auto;
+        padding: 2rem 3rem;
+        background-color: #021746;
+        color: #fff;
+        border-radius: 25px;
+    
+        @include mobile {
+            width: 90%;
+            padding: 1rem;
+        }
+
+        header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+
+            .icon-link {
+                font-size: 35px;
+            }
+
+            .btn {
+                background: #132b63;
+                border: none;
+                outline: none;
+                padding: 10px 20px;
+                color: #fff;
+                font-size: 18px;
+                border-radius: 10px;
+                cursor: pointer;
+                font-weight: 600;
+
+                &:hover {
+                    background: #f37c62;
+                }
+            }
+        }
+
+        footer {
+            text-align: center;
+            margin-top: 2rem;
+
+            span a {
+                font-weight: 700;
+                color: #f37c62;
+            }
+        }
+
+        .link-shortener-wrapper {
+            .intro {
+                text-align: center;
+                margin: 4rem 0 3rem;
+
+                h1 {
+                    margin-bottom: 25px;
+                    font-size: 50px;
+                    padding: 0 6rem;
+                
+                    @include mobile {
+                        font-size: 35px;
+                    }
+
+                    span {
+                        color: #f37c62;
+                    }                    
+                }
+            }
+
+            .copied-success-message {
+                position: fixed;
+                top: 0;
+                left: 0;
+                background: #bee3be;
+                width: 100vw;
+                padding: 15px;
+                text-align: center;
+
+                p {
+                    font-weight: 600;
+                    font-size: 20px;
+                }
+            }
+
+            .link-input {
+                text-align: center;
+
+                input {
+                    padding: 15px 10px;
+                    background: #f7f4e3;
+                    border: none;
+                    outline: none;
+                    border-radius: 8px 0 0 8px;
+                    width: 50%;
+                    font-size: 18px;
+                
+                    @include mobile {
+                        width: 70%;
+                    }
+                }
+
+                button {
+                    border: none;
+                    outline: 0;
+                    padding: 15px;
+                    border-radius: 0 8px 8px 0;
+                    font-weight: 600;
+                    background: #f37c62;
+                    cursor: pointer;
+                    font-size: 18px;
+                    color: #fff;
+
+                    &:hover {
+                        background: #132b63;
+                    }
+                }
+            }
+
+            .link-output {
+                margin-top: 40px;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                gap: 20px;
+
+                button {
+                    background: transparent;
+                    border: none;
+                    outline: none;
+                    font-size: 25px;
+                    cursor: pointer;
+                }
+            }
+        }
+    }
+} 
