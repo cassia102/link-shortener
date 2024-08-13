@@ -2,6 +2,9 @@
 
 Generate unique shortened urls using bit.ly.
 
+You can view the app here:
+https://cassia-link-shortener.netlify.app
+
 # Features 
 
 - URL Input: Input a url and submit to generate a short bit.ly url
