@@ -8,7 +8,7 @@ export default function LinkShortener() {
     const [copied, setCopied] = useState(false);
 
     const handleSubmit = async () => {
-        const token = 'd793dc30c0d4f3e4cfc0f417dcd11dbe7970dbaa';
+        const token = process.env.REACT_APP_BITLY_API_KEY;
         const res = await fetch('https://api-ssl.bitly.com/v4/shorten', {
             method: 'POST',
             headers: {
